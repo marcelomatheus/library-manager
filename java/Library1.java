@@ -1,6 +1,6 @@
 
 import br.unimontes.library.management.controller.BookController;
-import br.unimontes.library.management.model.BookModel;
+import br.unimontes.library.management.model.entity.BookModel;
 import br.unimontes.library.management.view.BookView;
 
 /*

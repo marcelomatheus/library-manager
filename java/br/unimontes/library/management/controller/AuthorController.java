@@ -5,28 +5,30 @@
  */
 package br.unimontes.library.management.controller;
 
-import br.unimontes.library.management.model.entity.BookModel;
-import br.unimontes.library.management.model.services.BookService;
-import br.unimontes.library.management.view.RegisterBookView;
+import br.unimontes.library.management.model.entity.AuthorModel;
+import br.unimontes.library.management.view.RegisterAuthorView;
+import br.unimontes.library.management.model.services.AuthorService;
+
 /**
  *
  * @author marce
  */
-public class BookController {
-    private BookModel book;
-    private RegisterBookView bookView;
-    private BookService bookService = new BookService();
-
-    public BookController(RegisterBookView bookView, BookModel book) {
-        this.book = book;
-        this.bookView = bookView;
+public class AuthorController {
+    
+    private AuthorModel author;
+    private RegisterAuthorView authorView;
+    private AuthorService authorService = new AuthorService();
+    
+    public void authorController(AuthorModel author, RegisterAuthorView authorView){
+        this.author = author;
+        this.authorView = authorView;
 
         this.bookView.getbSubmitBook().addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 book.setTitle(bookView.getiNameSignupBook().getText());
                 book.setISBN(bookView.getiIsbnSignupBook().getText());
                 book.setPages(bookView.getiPagesSignupBook().getText());
-                book.setPublisher(bookView.getiPublisherSignupBook().getText())
+                book.setPublisher(bookView.getiPublisherSignupBook().getText());
                 book.setAuthor(bookView.getiAuthorSignupBook().getText());
                 book.setAvailable(true);
                 bookService.register(book);
@@ -40,5 +42,5 @@ public class BookController {
         });
 
     }
-   
+}
 }
