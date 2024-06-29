@@ -11,6 +11,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.List;
+import java.sql.Statement;
+import java.sql.ResultSet;
 
 /**
  *
@@ -65,7 +67,26 @@ public class EmployeeDAO implements Dao<EmployeeModel>{
 
     @Override
     public EmployeeModel findOne(EmployeeModel entity) throws DAOException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Statement st = null;
+	EmployeeModel empModel = new EmployeeModel();
+	try {
+		st = (Statement) conn.createStatement();
+		ResultSet rs = null;
+		rs = st.executeQuery("SELECT * FROM Employee WHERE email='"+entity.getEmail()+"'");
+		while (rs.next()) {
+                        empModel.setIdEmployee(rs.getInt("e_id"));
+                        empModel.setCpf(rs.getString("e_cpf"));
+			empModel.setName(rs.getString("e_name"));
+                        empModel.setEmail(rs.getString("e_email"));
+                        empModel.setPassword(rs.getString("e_password"));
+                    }
+		
+		rs.close();
+                return empModel;
+               
+	} catch (SQLException e) {
+		return null;
+	}
     }
     
 }

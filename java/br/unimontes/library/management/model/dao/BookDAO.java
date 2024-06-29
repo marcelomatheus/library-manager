@@ -9,10 +9,11 @@ import br.unimontes.library.management.model.dao.exception.DAOException;
 import br.unimontes.library.management.model.entity.BookModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 /**
  *
@@ -68,7 +69,29 @@ public class BookDAO implements Dao<BookModel>{
 
     @Override
     public BookModel findOne(BookModel entity) throws DAOException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Statement st = null;
+	BookModel book = new BookModel();
+	try {
+		st = (Statement) conn.createStatement();
+		ResultSet rs = null;
+		rs = st.executeQuery("SELECT * FROM Book b, Publisher p, Author a WHERE b_isbn='"+entity.getISBN()+"'");
+		while (rs.next()) {
+                        book.setId(rs.getInt("b_id"));
+                        book.setISBN(rs.getString("b_isbn"));
+			book.setTitle(rs.getString("b_title"));
+                        book.getAuthor().setName(rs.getString("a_name"));
+                        book.getPublisher().setCnpj((rs.getString("p_cnpj")));
+                        book.setAvailable(rs.getBoolean("b_status"));
+                        book.setPages(rs.getInt("b_pages"));
+                  
+		}
+		
+		rs.close();
+                return book;
+               
+	} catch (SQLException e) {
+		return null;
+	}
     }
     
 }
