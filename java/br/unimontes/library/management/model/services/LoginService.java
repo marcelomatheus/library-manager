@@ -42,7 +42,7 @@ public class LoginService {
         }
     }
     
-    //return 0 == access succefull employee, 1 == access successful user, 2 == acess failed
+    //return 0 == access succefull employee, 1 == access successful user, 2 == access failed
     public int login(LoginModel login) throws DAOException{
         EmployeeModel emp = new EmployeeModel();
         UserModel user = new UserModel();        
