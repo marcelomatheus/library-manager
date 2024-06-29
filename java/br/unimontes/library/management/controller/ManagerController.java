@@ -62,6 +62,11 @@ public class ManagerController {
                empView.setVisible(true);
             }
         });
+        this.sEmpView.getbReportAuthor().addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+               empView.setVisible(true);
+            }
+        });
 
     }
 }

@@ -5,15 +5,17 @@
  */
 package br.unimontes.library.management.view;
 
+import javax.swing.JButton;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
+
 /**
  *
  * @author marce
  */
 public class ScreenEmployeeView extends javax.swing.JFrame {
 
-    /**
-     * Creates new form ScreenEmployeeView
-     */
+    
     public ScreenEmployeeView() {
         initComponents();
     }
@@ -38,11 +40,11 @@ public class ScreenEmployeeView extends javax.swing.JFrame {
         bPublisherRegisterEmp = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenu6 = new javax.swing.JMenu();
-        jMenu7 = new javax.swing.JMenu();
+        bReportPublisher = new javax.swing.JMenuItem();
+        bReportAuthor = new javax.swing.JMenuItem();
+        bReportLoan = new javax.swing.JMenu();
+        bSignupEmployee = new javax.swing.JMenu();
+        bBackEmployee = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
 
@@ -76,22 +78,27 @@ public class ScreenEmployeeView extends javax.swing.JFrame {
 
         jMenu1.setText("Relatórios");
 
-        jMenuItem1.setText("Relatório por Editora");
-        jMenu1.add(jMenuItem1);
+        bReportPublisher.setText("Relatório por Editora");
+        bReportPublisher.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bReportPublisherActionPerformed(evt);
+            }
+        });
+        jMenu1.add(bReportPublisher);
 
-        jMenuItem2.setText("Relatório por Autor");
-        jMenu1.add(jMenuItem2);
+        bReportAuthor.setText("Relatório por Autor");
+        jMenu1.add(bReportAuthor);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Empréstimos");
-        jMenuBar1.add(jMenu2);
+        bReportLoan.setText("Empréstimos");
+        jMenuBar1.add(bReportLoan);
 
-        jMenu6.setText("Registrar Funcionário");
-        jMenuBar1.add(jMenu6);
+        bSignupEmployee.setText("Registrar Funcionário");
+        jMenuBar1.add(bSignupEmployee);
 
-        jMenu7.setText("Sair");
-        jMenuBar1.add(jMenu7);
+        bBackEmployee.setText("Sair");
+        jMenuBar1.add(bBackEmployee);
 
         setJMenuBar(jMenuBar1);
 
@@ -132,23 +139,91 @@ public class ScreenEmployeeView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bPublisherRegisterEmpActionPerformed
 
+    private void bReportPublisherActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bReportPublisherActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bReportPublisherActionPerformed
+
+    public JButton getbAuthorRegisterEmp() {
+        return bAuthorRegisterEmp;
+    }
+
+    public void setbAuthorRegisterEmp(JButton bAuthorRegisterEmp) {
+        this.bAuthorRegisterEmp = bAuthorRegisterEmp;
+    }
+
+    public JMenu getbBackEmployee() {
+        return bBackEmployee;
+    }
+
+    public void setbBackEmployee(JMenu bBackEmployee) {
+        this.bBackEmployee = bBackEmployee;
+    }
+
+    public JButton getbBookRegisterEmp() {
+        return bBookRegisterEmp;
+    }
+
+    public void setbBookRegisterEmp(JButton bBookRegisterEmp) {
+        this.bBookRegisterEmp = bBookRegisterEmp;
+    }
+
+    public JButton getbPublisherRegisterEmp() {
+        return bPublisherRegisterEmp;
+    }
+
+    public void setbPublisherRegisterEmp(JButton bPublisherRegisterEmp) {
+        this.bPublisherRegisterEmp = bPublisherRegisterEmp;
+    }
+
+    public JMenuItem getbReportAuthor() {
+        return bReportAuthor;
+    }
+
+    public void setbReportAuthor(JMenuItem bReportAuthor) {
+        this.bReportAuthor = bReportAuthor;
+    }
+
+    public JMenu getbReportLoan() {
+        return bReportLoan;
+    }
+
+    public void setbReportLoan(JMenu bReportLoan) {
+        this.bReportLoan = bReportLoan;
+    }
+
+    public JMenuItem getbReportPublisher() {
+        return bReportPublisher;
+    }
+
+    public void setbReportPublisher(JMenuItem bReportPublisher) {
+        this.bReportPublisher = bReportPublisher;
+    }
+
+    public JMenu getbSignupEmployee() {
+        return bSignupEmployee;
+    }
+
+    public void setbSignupEmployee(JMenu bSignupEmployee) {
+        this.bSignupEmployee = bSignupEmployee;
+    }
+
   
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bAuthorRegisterEmp;
+    private javax.swing.JMenu bBackEmployee;
     private javax.swing.JButton bBookRegisterEmp;
     private javax.swing.JButton bPublisherRegisterEmp;
+    private javax.swing.JMenuItem bReportAuthor;
+    private javax.swing.JMenu bReportLoan;
+    private javax.swing.JMenuItem bReportPublisher;
+    private javax.swing.JMenu bSignupEmployee;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenu jMenu6;
-    private javax.swing.JMenu jMenu7;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     // End of variables declaration//GEN-END:variables

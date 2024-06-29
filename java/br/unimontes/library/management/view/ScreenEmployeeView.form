@@ -46,29 +46,32 @@
             <Property name="text" type="java.lang.String" value="Relat&#xf3;rios"/>
           </Properties>
           <SubComponents>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
+            <MenuItem class="javax.swing.JMenuItem" name="bReportPublisher">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Relat&#xf3;rio por Editora"/>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bReportPublisherActionPerformed"/>
+              </Events>
             </MenuItem>
-            <MenuItem class="javax.swing.JMenuItem" name="jMenuItem2">
+            <MenuItem class="javax.swing.JMenuItem" name="bReportAuthor">
               <Properties>
                 <Property name="text" type="java.lang.String" value="Relat&#xf3;rio por Autor"/>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu2">
+        <Menu class="javax.swing.JMenu" name="bReportLoan">
           <Properties>
             <Property name="text" type="java.lang.String" value="Empr&#xe9;stimos"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu6">
+        <Menu class="javax.swing.JMenu" name="bSignupEmployee">
           <Properties>
             <Property name="text" type="java.lang.String" value="Registrar Funcion&#xe1;rio"/>
           </Properties>
         </Menu>
-        <Menu class="javax.swing.JMenu" name="jMenu7">
+        <Menu class="javax.swing.JMenu" name="bBackEmployee">
           <Properties>
             <Property name="text" type="java.lang.String" value="Sair"/>
           </Properties>
