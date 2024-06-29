@@ -9,7 +9,9 @@ import br.unimontes.library.management.model.dao.exception.DAOException;
 import br.unimontes.library.management.model.entity.UserModel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.List;
 
 /**
@@ -65,7 +67,27 @@ public class UserDAO implements Dao<UserModel> {
 
     @Override
     public UserModel findOne(UserModel entity) throws DAOException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Statement st = null;
+	UserModel user = new UserModel();
+	try {
+		st = (Statement) conn.createStatement();
+		ResultSet rs = null;
+		rs = st.executeQuery("SELECT * FROM Employee WHERE email='"+entity.getEmail()+"'");
+		while (rs.next()) {
+                        user.setIdUser(rs.getInt("u_id"));
+                        user.setCpf(rs.getString("u_cpf"));
+			user.setName(rs.getString("u_name"));
+                        user.setEmail(rs.getString("u_email"));
+                        user.setPassword(rs.getString("u_password"));
+                    }
+		
+		rs.close();
+                return user;
+               
+	} catch (SQLException e) {
+		return null;
+	}
+    }
     }
 
-}
+
