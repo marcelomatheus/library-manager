@@ -10,6 +10,7 @@ import br.unimontes.library.management.model.dao.EmployeeDAO;
 import br.unimontes.library.management.model.dao.UserDAO;
 import br.unimontes.library.management.model.dao.exception.DAOException;
 import br.unimontes.library.management.model.entity.EmployeeModel;
+import br.unimontes.library.management.model.entity.LoginModel;
 import br.unimontes.library.management.model.entity.UserModel;
 
 /**
@@ -42,18 +43,18 @@ public class LoginService {
     }
     
     //return 0 == access succefull employee, 1 == access successful user, 2 == acess failed
-    public int login(String email, String password, int typeLogin) throws DAOException{
+    public int login(LoginModel login) throws DAOException{
         EmployeeModel emp = new EmployeeModel();
         UserModel user = new UserModel();        
-        if(typeLogin == 0){
-            emp.setEmail(email);
-            emp.setPassword(password);
+        if(login.getTypeLogin() == 0){
+            emp.setEmail(login.getEmail());
+            emp.setPassword(login.getPassword());
             if(validateEmployee(emp)){
                 return 0;
             }
-        }else if(typeLogin == 1){
-            user.setEmail(email);
-            user.setPassword(password);
+        }else if(login.getTypeLogin() == 1){
+            user.setEmail(login.getEmail());
+            user.setPassword(login.getPassword());
            if(validateUser(user)){
                 return 1;
             }

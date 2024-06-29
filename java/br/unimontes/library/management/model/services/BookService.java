@@ -18,6 +18,7 @@ public class BookService {
     private BookDAO bookDAO;
 
     public void register(BookModel book) throws DAOException {
+        book.setAvailable(true);
         bookDAO.save(book);
     }
 }

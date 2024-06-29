@@ -5,6 +5,10 @@
  */
 package br.unimontes.library.management.view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+import javax.swing.JToggleButton;
+
 /**
  *
  * @author marce
@@ -61,6 +65,11 @@ public class SignupUserView extends javax.swing.JFrame {
         });
 
         bSubmitSignup.setText("Cadastrar");
+        bSubmitSignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSubmitSignupActionPerformed(evt);
+            }
+        });
 
         jLabel5.setText("Cadastro de Usuário");
 
@@ -141,6 +150,10 @@ public class SignupUserView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_bBackSignupActionPerformed
 
+    private void bSubmitSignupActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSubmitSignupActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bSubmitSignupActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,6 +188,54 @@ public class SignupUserView extends javax.swing.JFrame {
                 new SignupUserView().setVisible(true);
             }
         });
+    }
+
+    public JToggleButton getbBackSignup() {
+        return bBackSignup;
+    }
+
+    public void setbBackSignup(JToggleButton bBackSignup) {
+        this.bBackSignup = bBackSignup;
+    }
+
+    public JButton getbSubmitSignup() {
+        return bSubmitSignup;
+    }
+
+    public void setbSubmitSignup(JButton bSubmitSignup) {
+        this.bSubmitSignup = bSubmitSignup;
+    }
+
+    public JTextField getiCpfUserSignup() {
+        return iCpfUserSignup;
+    }
+
+    public void setiCpfUserSignup(JTextField iCpfUserSignup) {
+        this.iCpfUserSignup = iCpfUserSignup;
+    }
+
+    public JTextField getiEmailUserSignup() {
+        return iEmailUserSignup;
+    }
+
+    public void setiEmailUserSignup(JTextField iEmailUserSignup) {
+        this.iEmailUserSignup = iEmailUserSignup;
+    }
+
+    public JTextField getiNameUserSignup() {
+        return iNameUserSignup;
+    }
+
+    public void setiNameUserSignup(JTextField iNameUserSignup) {
+        this.iNameUserSignup = iNameUserSignup;
+    }
+
+    public JTextField getiPasswordUserSignup() {
+        return iPasswordUserSignup;
+    }
+
+    public void setiPasswordUserSignup(JTextField iPasswordUserSignup) {
+        this.iPasswordUserSignup = iPasswordUserSignup;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

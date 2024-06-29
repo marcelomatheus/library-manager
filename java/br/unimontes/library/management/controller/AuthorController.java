@@ -5,6 +5,7 @@
  */
 package br.unimontes.library.management.controller;
 
+import br.unimontes.library.management.model.dao.exception.DAOException;
 import br.unimontes.library.management.model.entity.AuthorModel;
 import br.unimontes.library.management.view.RegisterAuthorView;
 import br.unimontes.library.management.model.services.AuthorService;
@@ -26,7 +27,11 @@ public class AuthorController {
         this.authorView.getbSubmitAuthor().addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 author.setName(authorView.getiNameAuthorSinup().getText());
+                try{
                 authorService.register(author);
+                }catch(DAOException DAOex){
+                    System.out.println("Error" + DAOex);
+                }
             }
         });
 
@@ -38,4 +43,4 @@ public class AuthorController {
 
     }
 }
-}
+

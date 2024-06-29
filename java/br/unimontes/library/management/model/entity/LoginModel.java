@@ -10,17 +10,19 @@ package br.unimontes.library.management.model.entity;
  * @author marce
  */
 public class LoginModel {
-    private int idLogin; //user or employeeEmail
+    private String email; //user or employeeEmail
     private String password;
     private int typeLogin; //0 for employee, and 1 for user
 
-    public int getIdLogin() {
-        return idLogin;
+    public String getEmail() {
+        return email;
     }
 
-    public void setIdLogin(int idLogin) {
-        this.idLogin = idLogin;
+    public void setEmail(String email) {
+        this.email = email;
     }
+
+    
 
     public String getPassword() {
         return password;

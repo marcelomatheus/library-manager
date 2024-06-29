@@ -53,6 +53,12 @@ public class RegisterBookView extends javax.swing.JFrame {
             }
         });
 
+        iIsbnSignupBook.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iIsbnSignupBookActionPerformed(evt);
+            }
+        });
+
         jLabel1.setText("ISBN do livro");
 
         jLabel2.setText("Nome do livro");
@@ -174,6 +180,10 @@ public class RegisterBookView extends javax.swing.JFrame {
     private void bSubmitBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSubmitBookActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bSubmitBookActionPerformed
+
+    private void iIsbnSignupBookActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iIsbnSignupBookActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iIsbnSignupBookActionPerformed
 
     /**
      * @param args the command line arguments

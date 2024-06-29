@@ -5,6 +5,9 @@
  */
 package br.unimontes.library.management.view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author marce
@@ -155,6 +158,39 @@ public class RegisterPublisherView extends javax.swing.JFrame {
         });
     }
 
+    public JButton getbBackPublisher() {
+        return bBackPublisher;
+    }
+
+    public void setbBackPublisher(JButton bBackPublisher) {
+        this.bBackPublisher = bBackPublisher;
+    }
+
+    public JButton getbSubmitPublisher() {
+        return bSubmitPublisher;
+    }
+
+    public void setbSubmitPublisher(JButton bSubmitPublisher) {
+        this.bSubmitPublisher = bSubmitPublisher;
+    }
+
+    public JTextField getiCnpjPublisherSignup() {
+        return iCnpjPublisherSignup;
+    }
+
+    public void setiCnpjPublisherSignup(JTextField iCnpjPublisherSignup) {
+        this.iCnpjPublisherSignup = iCnpjPublisherSignup;
+    }
+
+    public JTextField getiNamePublisherSignup() {
+        return iNamePublisherSignup;
+    }
+
+    public void setiNamePublisherSignup(JTextField iNamePublisherSignup) {
+        this.iNamePublisherSignup = iNamePublisherSignup;
+    }
+
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bBackPublisher;
     private javax.swing.JButton bSubmitPublisher;

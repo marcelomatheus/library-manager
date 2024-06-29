@@ -5,6 +5,11 @@
  */
 package br.unimontes.library.management.view;
 
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
 /**
  *
  * @author marce
@@ -39,6 +44,7 @@ public class ScreenUserView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         iIsbnLoan1 = new javax.swing.JTextField();
         bReturnBookUser = new javax.swing.JButton();
+        iCpfLoan = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -86,6 +92,13 @@ public class ScreenUserView extends javax.swing.JFrame {
             }
         });
 
+        iCpfLoan.setText("Informe seu CPF");
+        iCpfLoan.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                iCpfLoanActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,36 +115,34 @@ public class ScreenUserView extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 209, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(bBookLoan)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(110, 110, 110)))
-                                .addComponent(iIsbnLoan1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jLabel2)
                             .addComponent(bReturnBookUser, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(iIsbnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(86, 86, 86))))
+                            .addComponent(jLabel4)
+                            .addComponent(iIsbnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                            .addComponent(bBookLoan, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(iIsbnLoan1, javax.swing.GroupLayout.DEFAULT_SIZE, 192, Short.MAX_VALUE)
+                            .addComponent(iCpfLoan))
+                        .addGap(274, 274, 274))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(23, 23, 23)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 10, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGap(3, 3, 3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(iIsbnLoan1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(iCpfLoan, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bBookLoan)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -140,8 +151,8 @@ public class ScreenUserView extends javax.swing.JFrame {
                         .addComponent(iIsbnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(bReturnBookUser))
-                    .addComponent(jScrollPane2))
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54))
         );
 
         pack();
@@ -162,6 +173,18 @@ public class ScreenUserView extends javax.swing.JFrame {
     private void bReturnBookUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bReturnBookUserActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_bReturnBookUserActionPerformed
+
+    private void iCpfLoanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iCpfLoanActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iCpfLoanActionPerformed
+
+    public JTextField getiCpfLoan() {
+        return iCpfLoan;
+    }
+
+    public void setiCpfLoan(JTextField iCpfLoan) {
+        this.iCpfLoan = iCpfLoan;
+    }
 
     /**
      * @param args the command line arguments
@@ -198,9 +221,74 @@ public class ScreenUserView extends javax.swing.JFrame {
         });
     }
 
+    public JButton getbBookLoan() {
+        return bBookLoan;
+    }
+
+    public void setbBookLoan(JButton bBookLoan) {
+        this.bBookLoan = bBookLoan;
+    }
+
+    public JButton getbReturnBookUser() {
+        return bReturnBookUser;
+    }
+
+    public void setbReturnBookUser(JButton bReturnBookUser) {
+        this.bReturnBookUser = bReturnBookUser;
+    }
+
+    public JTextField getiIsbnLoan1() {
+        return iIsbnLoan1;
+    }
+
+    public void setiIsbnLoan1(JTextField iIsbnLoan1) {
+        this.iIsbnLoan1 = iIsbnLoan1;
+    }
+
+    public JTextField getiIsbnReturn() {
+        return iIsbnReturn;
+    }
+
+    public void setiIsbnReturn(JTextField iIsbnReturn) {
+        this.iIsbnReturn = iIsbnReturn;
+    }
+
+    public JScrollPane getjScrollPane1() {
+        return jScrollPane1;
+    }
+
+    public void setjScrollPane1(JScrollPane jScrollPane1) {
+        this.jScrollPane1 = jScrollPane1;
+    }
+
+    public JScrollPane getjScrollPane2() {
+        return jScrollPane2;
+    }
+
+    public void setjScrollPane2(JScrollPane jScrollPane2) {
+        this.jScrollPane2 = jScrollPane2;
+    }
+
+    public JTextArea gettBookAvailableUser() {
+        return tBookAvailableUser;
+    }
+
+    public void settBookAvailableUser(JTextArea tBookAvailableUser) {
+        this.tBookAvailableUser = tBookAvailableUser;
+    }
+
+    public JTextArea gettShowBookLoanUser() {
+        return tShowBookLoanUser;
+    }
+
+    public void settShowBookLoanUser(JTextArea tShowBookLoanUser) {
+        this.tShowBookLoanUser = tShowBookLoanUser;
+    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bBookLoan;
     private javax.swing.JButton bReturnBookUser;
+    private javax.swing.JTextField iCpfLoan;
     private javax.swing.JTextField iIsbnLoan1;
     private javax.swing.JTextField iIsbnReturn;
     private javax.swing.JLabel jLabel1;

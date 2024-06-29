@@ -5,6 +5,7 @@
  */
 package br.unimontes.library.management.controller;
 
+import br.unimontes.library.management.model.dao.exception.DAOException;
 import br.unimontes.library.management.model.entity.UserModel;
 import br.unimontes.library.management.model.services.UserService;
 import br.unimontes.library.management.view.SignupUserView;
@@ -28,7 +29,11 @@ public class UserController {
                 user.setName(userView.getiNameUserSignup().getText());
                 user.setEmail(userView.getiEmailUserSignup().getText());
                 user.setPassword(userView.getiPasswordUserSignup().getText());
+                try{
                 userService.register(user);
+                }catch(DAOException DAOex){
+                    System.out.println("Error "+DAOex);
+                }
             }
         });
 
