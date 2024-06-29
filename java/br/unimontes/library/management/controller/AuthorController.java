@@ -20,7 +20,7 @@ public class AuthorController {
     private RegisterAuthorView authorView;
     private AuthorService authorService = new AuthorService();
     
-    public void authorController(AuthorModel author, RegisterAuthorView authorView){
+    public void AuthorController(AuthorModel author, RegisterAuthorView authorView){
         this.author = author;
         this.authorView = authorView;
 
@@ -40,7 +40,9 @@ public class AuthorController {
                authorView.dispose();
             }
         });
-
     }
+   
+    
+   
 }
 
