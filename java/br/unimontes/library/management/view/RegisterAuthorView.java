@@ -5,6 +5,9 @@
  */
 package br.unimontes.library.management.view;
 
+import javax.swing.JButton;
+import javax.swing.JTextField;
+
 /**
  *
  * @author marce
@@ -51,6 +54,11 @@ public class RegisterAuthorView extends javax.swing.JFrame {
         });
 
         bSubmitAuthor.setText("Cadastrar");
+        bSubmitAuthor.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSubmitAuthorActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -97,6 +105,10 @@ public class RegisterAuthorView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_iNameAuthorSinupActionPerformed
 
+    private void bSubmitAuthorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSubmitAuthorActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bSubmitAuthorActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -130,6 +142,30 @@ public class RegisterAuthorView extends javax.swing.JFrame {
                 new RegisterAuthorView().setVisible(true);
             }
         });
+    }
+
+    public JButton getbBackAuthor() {
+        return bBackAuthor;
+    }
+
+    public void setbBackAuthor(JButton bBackAuthor) {
+        this.bBackAuthor = bBackAuthor;
+    }
+
+    public JButton getbSubmitAuthor() {
+        return bSubmitAuthor;
+    }
+
+    public void setbSubmitAuthor(JButton bSubmitAuthor) {
+        this.bSubmitAuthor = bSubmitAuthor;
+    }
+
+    public JTextField getiNameAuthorSinup() {
+        return iNameAuthorSinup;
+    }
+
+    public void setiNameAuthorSinup(JTextField iNameAuthorSinup) {
+        this.iNameAuthorSinup = iNameAuthorSinup;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

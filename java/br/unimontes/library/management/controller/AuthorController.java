@@ -23,21 +23,16 @@ public class AuthorController {
         this.author = author;
         this.authorView = authorView;
 
-        this.bookView.getbSubmitBook().addActionListener(new java.awt.event.ActionListener() {
+        this.authorView.getbSubmitAuthor().addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                book.setTitle(bookView.getiNameSignupBook().getText());
-                book.setISBN(bookView.getiIsbnSignupBook().getText());
-                book.setPages(bookView.getiPagesSignupBook().getText());
-                book.setPublisher(bookView.getiPublisherSignupBook().getText());
-                book.setAuthor(bookView.getiAuthorSignupBook().getText());
-                book.setAvailable(true);
-                bookService.register(book);
+                author.setName(authorView.getiNameAuthorSinup().getText());
+                authorService.register(author);
             }
         });
 
-        this.bookView.getbBackBook().addActionListener(new java.awt.event.ActionListener() {
+        this.authorView.getbBackAuthor().addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-               bookView.dispose();
+               authorView.dispose();
             }
         });
 
