@@ -26,5 +26,5 @@
   
 ## How to work
 - Install JVM 17
-- Clone then repositoty
+- Clone that repositoty
 - Execute 'java java/Library1' in console or terminal command
