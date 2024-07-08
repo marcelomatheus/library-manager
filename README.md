@@ -8,6 +8,7 @@
 
 ## Aplication Architecture
 ### Design Model View Control (MVC) with connection Singleton
+<pre>
 > ###### |./java
 > ###### |     ./br.unimontes.library.management
 > ###### |        ./controller -> Integration between view and services with addListenner
@@ -16,7 +17,7 @@
 > ###### |            ./entity -> POJO entities
 > ###### |            ./services -> Service rules
 > ###### |        ./view -> Display screen desktop
-
+</pre>
 ## Functionalities
 - Signup user and employee
 - Registration books, author and publisher
