@@ -9,13 +9,13 @@
 ## Aplication Architecture
 ### Design Model View Control (MVC) with connection Singleton
 > ./java
-       ./br.unimontes.library.management
-####          ./controller -> Integration between view and services with addListenner
-####          ./model 
-####              ./dao -> Data Access Object of all systems entities, connection unit with JDBC in DBSingleton
-####              ./entity -> POJO entities
-####              ./services -> Service rules
-####          ./view -> Display screen desktop
+>       ./br.unimontes.library.management
+>          ./controller -> Integration between view and services with addListenner
+>          ./model 
+>              ./dao -> Data Access Object of all systems entities, connection unit with JDBC in DBSingleton
+>              ./entity -> POJO entities
+>              ./services -> Service rules
+>          ./view -> Display screen desktop
 
 ## Functionalities
 - Signup user and employee
